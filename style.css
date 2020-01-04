@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6, p {
 h3 {
   font-weight: 300;
   font-size: 32px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   color: #526e79
 }
 
@@ -39,7 +39,7 @@ a:hover {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 50px 20px;
+  padding: 50px 30px;
 }
 
 /* NAVBAR */
@@ -114,14 +114,22 @@ a:hover {
 
 /* TREATMENTS */
 
+.treatments {
+  background: #eff6f9;
+}
+
 .treatments .treatments-boxes {
   display: flex;
   justify-content: space-between;
 }
 
 .treatments .treatments-boxes .box { 
-  border: 2px solid #00a5c140;
+  background: #fff;
+  border: 1px solid #00101020;
+  box-shadow: 0px 2px 7px 1px #00101015;
+  border-radius: 5px;
   padding: 20px;
+  width: 50%;
 }
 
 .treatments .treatments-boxes .box:first-child { 
@@ -132,6 +140,14 @@ a:hover {
   margin-left: 40px;
 }
 
+.treatments .box p {
+  margin-bottom: 10px;
+}
+
+.treatments .box p:last-child {
+  margin-bottom: 0px;
+}
+
 /* BOOKINGS */
 
 .bookings {
@@ -140,7 +156,8 @@ a:hover {
 
 .bookings .section-content {
   display: flex;
-  padding: 0 20px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .bookings .booking-info {
@@ -178,13 +195,21 @@ a:hover {
   height: 750px !important;
   transform: scale(0.8);
   top: -75px;
-  right: -110px;
+  right: -118px;
 }
 
 /* ABOUT */
 
 .about .section-content {
   display: flex;
+}
+
+.picture-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 30px;
 }
 
 .picture-jesus {
@@ -194,12 +219,51 @@ a:hover {
   height: 300px;
   border-radius: 50%;
   margin: auto;
-  max-width: 40%;
 }
 
 .about .curriculum {  
-  min-width: 60%;
+  width: 50%;
   padding-left: 50px;
+}
+
+.curriculum h6 {
+  font-weight: 500;
+}
+
+.curriculum .about-info {
+  margin-bottom: 30px;
+}
+
+.curriculum .curriculum-wrapper {
+  max-width: 500px;
+}
+
+.curriculum .cv-title {
+  font-weight: 500;
+  color: #002a3b;
+  margin-bottom: 5px;
+}
+
+.curriculum .cv-title i {
+  color: #002a3b40;
+  margin-right: 5px;
+}
+
+.curriculum .cv-info {
+  font-size: 14px;
+  color: #526e79;
+  margin-bottom: 20px;
+  padding-left: 25px;
+}
+
+/* MAP */
+
+.map {
+  background-image: url('assets/mapa.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 500px;
 }
 
 /* FOOTER */
@@ -235,13 +299,51 @@ footer i {
   opacity: .4;
 }
 
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1200px) { 
+
+  .calendly-inline-widget {
+    right: -10%;
+    min-width: 650px !important;
+  }
+
+}
+
+@media only screen and (max-width: 900px) { 
+  
+  .bookings .section-content {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .bookings .booking-info {
+    width: 100%;
+    padding-bottom: 0;
+  }  
+
+  .calendly-inline-widget {    
+    right: auto;
+    min-width: 100% !important;
+  }
+
+}
+
 @media only screen and (max-width: 768px) {
+
+  .section-content {
+    padding: 40px 20px;
+  }
 
   .treatments .treatments-boxes,
   .bookings .section-content,
   .about .section-content,
   footer .section-content {
     flex-direction: column;
+  }
+
+  .treatments .treatments-boxes .box {
+    width: 100%;
   }
 
   .treatments .treatments-boxes .box:first-child {
@@ -252,7 +354,9 @@ footer i {
     margin: 0;
   }
 
-  .bookings .booking-info {
+  .about .picture-container {
+    justify-content: center;
+    padding-right: 0px;
     width: 100%;
   }
 
@@ -266,6 +370,10 @@ footer i {
     padding-left: 0;
   }
 
+  .curriculum .curriculum-wrapper {
+    margin: auto;
+  }
+
   footer .vertical-line {
     display: none;
   }
@@ -276,6 +384,16 @@ footer i {
 
   footer p:last-child {
     margin: 0;
+  }
+
+}
+
+
+@media only screen and (max-width: 689px) {
+
+  .bookings .booking-calendar {
+    height: 520px;
+    overflow: hidden;
   }
 
 }
