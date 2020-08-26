@@ -140,6 +140,7 @@ section {
 .cover .texts p {  
   font-weight: 300;
   margin-bottom: 10px;
+  color: #fff !important;
 }
 
 .cover .texts i {  
@@ -422,6 +423,7 @@ footer p {
   margin: 0 20px;
   white-space: nowrap;
   font-size: 14px;
+  color: #fff !important;
 }
 
 
@@ -490,7 +492,6 @@ footer i {
   .treatments .treatments-boxes .box:last-child {
     margin: 0;
   }
-
     
   .bookings .section-content {
     flex-direction: column;
@@ -502,9 +503,12 @@ footer i {
     padding-bottom: 0;
   }  
 
-  .prices-info {
+  .prices-info,
+  .prices-info .legal {
     width: 100%;
   }
+
+  
 
   .calendly-inline-widget {    
     right: auto;
