@@ -24,7 +24,7 @@ h3 {
 h6 {
   font-size: 20px;
   margin-bottom: 15px;
-  color: #00a5c1;
+  color: #2698C0;
   font-weight: 600;
 }
 
@@ -53,6 +53,7 @@ section {
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 
 .navbar .section-content {
@@ -60,6 +61,11 @@ section {
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  max-width: 100%;
+}
+
+.navbar img {
+  height: 70px;
 }
 
 .navbar h5 {
@@ -84,15 +90,30 @@ section {
 /* COVER */
 
 .cover {
+  background-color: #2698C0;
+  position: relative;
+  height: 500px;
+}
+
+.cover .cover-img {
   background-image: url('assets/cover.png');
   background-size: cover;
-  background-color: #00a5c1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity ease-in-out .4s; 
+  opacity: 0;
+}
+
+.cover .cover-img.visible {
+  opacity: 1;
 }
 
 .cover .section-content {
   display: flex;
   height: 500px;
   align-items: center;
+  position: absolute;
 }
 
 .cover .texts {
@@ -100,14 +121,27 @@ section {
 }
 
 .cover .texts h2 {
-  font-weight: 500;
+  font-size: 2em;
+  font-weight: 400;
   margin: 0;
+  margin-bottom: 10px;
 }
 
 .cover .texts h5 {
   font-weight: 100;
-  font-size: 44px;
+  font-size: 2em;
   margin: 0;
+}
+
+.cover .texts p {  
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.cover .texts i {  
+  margin-right: 10px;
+  font-size: 16px;
+  opacity: .8;
 }
 
 .cover .line {  
@@ -124,6 +158,23 @@ section {
   background: #eff6f9;
 }
 
+.treatments h6 {  
+  display: flex;
+  align-items: center;
+}
+
+.treatments h6:last-child {
+  margin-bottom: 0;
+}
+
+.treatments i {
+
+  font-size: 8px;
+  margin-right: 8px;
+  /* line-height: 16px; */
+  color: #7dbed6;
+}
+
 .treatments .treatments-boxes {
   display: flex;
   justify-content: space-between;
@@ -133,13 +184,21 @@ section {
   background: #fff;
   border: 1px solid #00101020;
   box-shadow: 0px 2px 7px 1px #00101015;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 20px;
   width: 50%;
+  margin-top: 30%;
+  transition: all ease-out .7s;
+  opacity: 0;
+}
+
+.treatments .treatments-boxes .box.visible {
+  margin-top: 0;
+  opacity: 1;
 }
 
 .treatments .treatments-boxes .box:first-child { 
-  margin-right: 40px;
+  margin-right: 40px;    
 }
 
 .treatments .treatments-boxes .box:last-child { 
@@ -169,6 +228,14 @@ section {
 .bookings .booking-info {
   width: 50%;
   padding: 50px 0;
+  margin-top: 175px;
+  transition: all ease-out .5s;
+  opacity: 0;
+}
+
+.booking-info.visible {
+  opacity: 1;
+  margin-top: 0;
 }
 
 .bookings .booking-info p {
@@ -179,16 +246,16 @@ section {
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 400;
-  color: #00a5c1;
+  color: #2698C0;
 }
 
 .bookings .booking-info a {
-  color: #00a5c1;
+  color: #2698C0;
   text-decoration: none;
 }
 
 .bookings .booking-info i {
-  color: #00a5c140;
+  color: #2698C040;
   margin-right: 10px;
 }
 
@@ -205,6 +272,55 @@ section {
   overflow: hidden !important;
 }
 
+.prices-info {
+  width: 50%;
+  padding: 20px;
+}
+
+.prices-info .price-card {
+  background: #2698C0;
+  background: linear-gradient(331deg, rgba(29,126,164,1) 0%, rgba(38,152,192,1) 26%, rgb(0 215 255) 100%);
+  height: 300px;
+  margin: 0 auto;
+  width: auto;
+  text-align: center;
+  color: #fff;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 3px solid white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px 1px #0a323940, 0px 2px 3px 0px #0a323950;
+}
+
+.price-card h2 {
+  font-weight: 300;
+}
+
+.price-card h1 {
+  font-size: 85px;
+  font-weight: 300;
+}
+
+.price-card h1 small {
+  font-size: 60px;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+.price-card h4 {  
+  font-weight: 500;
+}
+
+.legal {
+  font-size: 12px;
+  width: 350px;
+  margin: 10px auto;
+  color: #526e79;
+}
 /* ABOUT */
 
 .about .section-content {
@@ -226,6 +342,14 @@ section {
   height: 300px;
   border-radius: 50%;
   margin: auto;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: all ease-out .4s;
+}
+
+.picture-jesus.visible {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .about .curriculum {  
@@ -262,11 +386,11 @@ section {
 /* MAP */
 
 .map {
-  background-image: url('assets/mapa.png');
-  background-size: cover;
-  background-position: center;
+  background-image: url('assets/map.png');
+  background-size: cover;  
+  background-position: 18% center;
   width: 100%;
-  height: 500px;
+  height: 650px;
 }
 
 /* FOOTER */
@@ -284,15 +408,16 @@ footer .section-content {
 }
 
 footer .vertical-line {
-  margin: 0 20px;
-  width: 2px;
+  margin: 0 10px;
+  width: 3px;
   height: 20px;
-  background: #00a5c140;
+  background: #2698C040;
 }
 
 footer p {
   margin: 0 20px;
   white-space: nowrap;
+  font-size: 14px;
 }
 
 
@@ -309,25 +434,6 @@ footer i {
   .calendly-inline-widget {
     right: -10%;
     min-width: 650px !important;
-  }
-
-}
-
-@media only screen and (max-width: 900px) { 
-  
-  .bookings .section-content {
-    flex-direction: column;
-    padding-bottom: 20px;
-  }
-
-  .bookings .booking-info {
-    width: 100%;
-    padding-bottom: 0;
-  }  
-
-  .calendly-inline-widget {    
-    right: auto;
-    min-width: 100% !important;
   }
 
 }
@@ -379,6 +485,26 @@ footer i {
 
   .treatments .treatments-boxes .box:last-child {
     margin: 0;
+  }
+
+    
+  .bookings .section-content {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .bookings .booking-info {
+    width: 100%;
+    padding-bottom: 0;
+  }  
+
+  .prices-info {
+    width: 100%;
+  }
+
+  .calendly-inline-widget {    
+    right: auto;
+    min-width: 100% !important;
   }
 
   .bookings .booking-calendar {
