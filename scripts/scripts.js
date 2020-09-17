@@ -28,7 +28,7 @@ function makeBoxesVisible() {
 
 function addInitialTransitionClasses() {
   handleScroll();
-  document.querySelector('.cover-img').setAttribute('class', 'cover-img visible');
+  // document.querySelector('.cover-img').setAttribute('class', 'cover-img visible');
   setTimeout(makeBoxesVisible, 200);
 }
 
