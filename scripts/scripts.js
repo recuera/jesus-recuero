@@ -14,7 +14,11 @@ function handleScroll() {
   // }
 
   if(isScrolledIntoView(document.querySelector('.bookings'))) {
-    document.querySelector('.booking-info').setAttribute('class', 'booking-info visible');
+    document.querySelectorAll('.booking-info').forEach(
+      function (element) {
+        element.setAttribute('class', 'booking-info visible')
+      }
+    );
   }
 }
 

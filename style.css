@@ -236,10 +236,19 @@ section {
 }
 
 .bookings .booking-info {
+  width: 50%;
   padding: 50px 0;
   margin-top: 175px;
   transition: all ease-out .5s;
   opacity: 0;
+}
+
+.bookings .booking-info:first-child {
+  padding-right: 20px;
+}
+
+.bookings .booking-info:last-child {
+  padding-left: 20px;
 }
 
 .booking-info.visible {
@@ -249,6 +258,11 @@ section {
 
 .bookings .booking-info p {
   margin-bottom: 30px;
+}
+
+.bookings .booking-info p strong {
+  color: #2698C0;
+  font-weight: 600;
 }
 
 .bookings .booking-info h4 {
@@ -526,7 +540,15 @@ footer i {
   .bookings .booking-info {
     width: 100%;
     padding-bottom: 0;
-  }  
+  }
+
+  .bookings .booking-info:first-child {
+    padding-right: 0px;
+  }
+  
+  .bookings .booking-info:last-child {
+    padding-left: 0px;
+  }
 
   .prices-info,
   .prices-info .legal {
