@@ -93,13 +93,13 @@ section {
   background-color: #2698C0;
   position: relative;
   width: 100%;
-  background-image: url('assets/cover.png');
+  background-image: url('./assets/cover.png');
   background-size: cover;
   transition: opacity ease-in-out .4s;
 }
 
 .cover .cover-img {
-  background-image: url('assets/cover.png');
+  background-image: url('./assets/cover.png');
   background-size: cover;
   position: absolute;
   width: 100%;
