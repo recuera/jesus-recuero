@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html,
 body {
   padding: 0;
@@ -15,10 +17,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h3 {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 32px;
   margin-bottom: 25px;
-  color: #526e79
+  color: #526e79;
+  font-family: 'Nunito', sans-serif;
 }
 
 h6 {
@@ -131,15 +134,16 @@ section {
 
 .cover .texts h2 {
   font-size: 2em;
-  font-weight: 400;
+  font-weight: 300;
   margin: 0;
-  margin-bottom: 10px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .cover .texts h5 {
-  font-weight: 100;
+  font-weight: 500;
   font-size: 2em;
   margin: 0;
+  font-family: 'Nunito', sans-serif;
 }
 
 .cover .texts p {  
@@ -322,30 +326,37 @@ section {
 .price-card h2 {
   font-weight: 300;
   text-shadow: 0px 1px 6px rgba(0,0,0,.3);
+  font-family: 'Nunito', sans-serif;
 }
 
 .price-card h3 {
   color: white;
-  font-weight: 300;
-  margin-bottom: 30px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 26px;
   font-size: 18px;
   text-shadow: 0px 1px 6px rgba(0,0,0,.3);
+  font-family: 'Nunito', sans-serif;
 }
 
 .price-card h1 {
   font-size: 85px;
-  font-weight: 300;
+  font-weight: 600;
   text-shadow: 0px 3px 10px rgba(0,0,0,.3);
+  font-family: 'Nunito', sans-serif;
+  line-height: 100px;
 }
 
 .price-card h1 small {
   font-size: 60px;
-  font-weight: 500;
+  font-weight: 600;
   margin-left: 8px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .price-card h4 {  
   font-weight: 500;
+  font-family: 'Nunito', sans-serif;
 }
 
 .legal {
